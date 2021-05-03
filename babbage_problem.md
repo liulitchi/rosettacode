@@ -40,11 +40,24 @@ int main(void) {
 	return 0;
 }
 ```
+
 2. Python
 ```python3
 # 继续从524开始，验证各个偶数
 current = 524
-while (current * current) % 1000000 != 269_696:
+while (current * current) % 1000000 != 269696:
 	current += 2;
 print("所求值为", current)
+```
+
+3. Rust
+```rust
+// 继续从524开始，验证各个偶数
+fn main() {
+    let mut current = 524;
+    while (current * current) % 1_000_000 != 269_696 {
+        current += 2;
+    }
+    println!("所求值为 {}", current);
+}
 ```
