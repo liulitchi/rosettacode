@@ -28,7 +28,7 @@ int main(void) {
 	int current = 518;     // 设 current 为所求的整数                              
 	int square;            // 设 square 为 current 的平方数
  
-	// 为 square 取十万的模，然后验证
+	// 为 square 取百万的模，然后验证
 	while (((square = current * current) % 1000000 != 269696) && (square < INT_MAX)) {
 		current += 2; 
 	}
