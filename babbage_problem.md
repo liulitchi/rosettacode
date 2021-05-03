@@ -24,7 +24,7 @@
 // 已知269696的平方根是519，我们从524开始，验证各个偶数 
 
 int main(void) {
-	int current = 518;     // 设 current 为所求的整数                              
+	int current = 524;     // 设 current 为所求的整数                              
 	int square;            // 设 square 为 current 的平方数
  
 	// 为 square 取百万的模，然后验证
