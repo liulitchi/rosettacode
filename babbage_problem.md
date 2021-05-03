@@ -21,7 +21,7 @@
 #include <stdio.h>
 #include <limits.h>
 
-// 设 current 为所求的整数，很明显它的末位数是 4 或 6，
+// 根据题意，很明显该整数的末位数是 4 或 6，
 // 已知 269696 的平方根是 519，我们先从 518 开始，验证各个偶数 
 
 int main(void) {
@@ -36,7 +36,7 @@ int main(void) {
 	if (square > INT_MAX)
 	    printf("已超出最大值。");
 	else		   
-	    printf("所求值为 %d 。\n", current);
+	    printf("所求值为 %d。\n", current);
   
 	return 0;
 }
