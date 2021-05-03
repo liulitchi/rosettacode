@@ -4,7 +4,7 @@
 
 > 一个数平方后，最末六位为 26 9696 ，那这个数的最小值为多少？
 
-> > —— 巴贝奇，致鲍登勋爵的信，1837年
+>	—— 巴贝奇，致鲍登勋爵的信，1837年
 
 他估计答案可能是 9 9736 ，平方为 99 4726 9696； 不过他也不能确定。
 
@@ -21,14 +21,16 @@
 #include <stdio.h>
 #include <limits.h>
 
+// 设 current 为所求的整数，很明显它的末位数是 4 或 6，
+// 已知 269696 的平方根是 519，我们先从 518 开始，验证各个偶数 
+
 int main(void) {
-	int current = 518; 	// 设 current 为要求的整数，已知 269696 的平方根为 519，
-                      // 我们先从 518 开始
-	int square;         // 设 square 为 current 的平方数
+	int current = 518;     // 设 current 为所求的整数                              
+	int square;            // 设 square 为 current 的平方数
  
 	// 为 square 求十万的模，然后验证
 	while (((square = current * current) % 1000000 != 269696) && (square < INT_MAX)) {
-		current += 2;
+		current += 2; 
 	}
  
 	if (square > INT_MAX)
