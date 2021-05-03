@@ -1,6 +1,6 @@
 ## 巴贝奇的问题
 
-查尔斯·巴贝奇（Charles Babbage），英国数学家。为了研制分析机，花费了大量时间和金钱。并相信他的分析机可解决各种数学问题，他举了一个例子：
+查尔斯·巴贝奇（Charles Babbage），英国数学家。为了研制分析机，花费了大量的时间和金钱。他相信他的分析机可解决各种数学问题，并给出一个例子：
 
 > 一个数平方后，最末六位为 26 9696 ，那这个数的最小值为多少？
 
@@ -28,7 +28,7 @@ int main(void) {
 	int current = 518;     // 设 current 为所求的整数                              
 	int square;            // 设 square 为 current 的平方数
  
-	// 为 square 求十万的模，然后验证
+	// 为 square 取十万的模，然后验证
 	while (((square = current * current) % 1000000 != 269696) && (square < INT_MAX)) {
 		current += 2; 
 	}
