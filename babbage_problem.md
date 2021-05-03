@@ -61,3 +61,19 @@ fn main() {
     println!("所求值为 {}", current);
 }
 ```
+
+4. Go 语言
+```go
+package main
+ 
+import "fmt"
+ 
+func main() {
+	var current int  // 设 current 为所求的整数，继续从524开始，验证各个偶数
+		for current = 524; current < 50000; current += 2 { 
+			if (current * current % 1000000) == 269696 {
+				fmt.Println("所求值为", current)
+		}
+	}
+}
+```
