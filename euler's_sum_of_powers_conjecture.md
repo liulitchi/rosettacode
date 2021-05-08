@@ -36,4 +36,44 @@
 ### 解答
 
 1. C 语言
+2. Python
+3. Rust
+
+4. Go 语言
+```go
+package main
+ 
+import (
+	"fmt"
+	"log"
+)
+ 
+func main() {
+	fmt.Println(eulerSum())
+}
+ 
+func eulerSum() (a, b, c, d, e int) {
+	var pow5 [250]int
+	for i := range pow5 {
+		pow5[i] = i * i * i * i * i
+	}
+	for d = 4; d < len(pow5); d++ {
+		for c = 3; c < d; c++ {
+			for b = 2; b < c; b++ {
+				for a = 1; a < b; a++ {
+					sum := pow5[a] + pow5[b] + pow5[c] + pow5[d]
+					for e = d + 1; e < len(pow5); e++ {
+						if sum == pow5[e] {
+							return
+						}
+					}
+				}
+			}
+		}
+	}
+	log.Fatal("no solution")
+	return
+}
+```
+
 
