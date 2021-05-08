@@ -2,7 +2,7 @@
 
 历经200余年的数学猜想，直到1966年，才由 Lander 和 Parkin 找到反例而被推翻。
 
-> 欧拉幂和猜想
+> 欧拉等幂和猜想
 
 > 对于每个大于2的整数n，任何n - 1个正整数的n次幂的和，都不是某正整数的n次幂。
 
@@ -42,14 +42,14 @@
 int main(void)
 {
 	int N = 250;
-	int pow5[N];
+	long long pow5[N];
 	for (int i = 0; i < N; i++)
 		pow5[i] = i * i * i * i * i;
 	for (int d = 4; d < N; d++) {
 		for (int c = 3; c < d; c++) {
 			for (int b = 2; b < c; b++) {
 				for (int a = 1; a < b; a++) {
-					int sum = pow5[a] + pow5[b] + pow5[c] + pow5[d];
+					long long sum = pow5[a] + pow5[b] + pow5[c] + pow5[d];
 					for (int e = d + 1; e < N; e++) {
 						if (sum == pow5[e])
 							printf("%d %d %d %d %d\n", a, b, c, d, e);
