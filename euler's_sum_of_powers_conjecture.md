@@ -36,8 +36,39 @@
 ### 解答
 
 1. C 语言
+```c
+#include <stdio.h>
+
+int main(void)
+{
+	int N = 250;
+	int pow5[N];
+	for (int i = 0; i < N; i++)
+		pow5[i] = i * i * i * i * i;
+	for (int d = 4; d < N; d++) {
+		for (int c = 3; c < d; c++) {
+			for (int b = 2; b < c; b++) {
+				for (int a = 1; a < b; a++) {
+					int sum = pow5[a] + pow5[b] + pow5[c] + pow5[d];
+					for (int e = d + 1; e < N; e++) {
+						if (sum == pow5[e])
+							printf("%d %d %d %d %d\n", a, b, c, d, e);
+					}
+				}
+			}
+		}
+	}
+	return 0;
+}
+```
+
 2. Python
+```python3
+```
+
 3. Rust
+```rust
+```
 
 4. Go 语言
 ```go
